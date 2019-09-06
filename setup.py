@@ -1,6 +1,8 @@
 from distutils.core import setup
+from catkin_pkg.python_setup import generate_distutils_setup
 
-setup(
-    version='1.0.6',
+d = generate_distutils_setup(
     packages=['marshmallow_oneofschema'],
 )
+
+setup(**d)
