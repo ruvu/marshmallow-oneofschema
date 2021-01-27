@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package format="2">
+<package format="3">
   <name>marshmallow_oneofschema</name>
   <version>0.0.0</version>
   <description>The marshmallow_oneofschema package</description>
@@ -10,5 +10,6 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <exec_depend>marshmallow</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 2">marshmallow</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 3">python3-marshmallow</exec_depend>
 </package>
